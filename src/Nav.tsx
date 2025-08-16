@@ -9,17 +9,17 @@ function Nav() {
           {/* <h2 className="font-special">Life Theater</h2> */}
           <img src={logo2} className="self-center w-1/2 p-1"></img>
         </div>
-        <a className="self-center" href="#Portfolio">
-          <h2>Testimonials</h2>
+        <a className="self-center" href="#Contact">
+          <h2>Packages</h2>
         </a>
         <a className="self-center" href="#Resume">
           <h2>Brochure</h2>
         </a>
-        <a className="self-center" href="#Contact">
-          <h2>Contact</h2>
+        <a className="self-center" href="#Portfolio">
+          <h2>Testimonials</h2>
         </a>
         <a className="self-center" href="#Contact">
-          <h2>Packages</h2>
+          <h2>Contact</h2>
         </a>
       </div>
     </>

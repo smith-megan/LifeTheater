@@ -110,11 +110,24 @@ function App() {
       </div>
       <div className="bg-[#fbf9f3]">
         <h1>Testimonials</h1>
+        <div className="grid grid-cols-3">
+          <div>
+            <img src={rightImage} className="w-1/12" />
+            <h2>
+              This is an amazing chance to capture a legacy like never before
+            </h2>
+
+            <img src={rightImage} className="w-1/12" />
+            <h2>-Name</h2>
+          </div>
+          <h2>two</h2>
+          <h2>three</h2>
+        </div>
       </div>
       <div id="Contact">
         <Contact />
       </div>
-      <div className="bg-dark h-10"></div>
+      <div className="bg-[#e2ddcc] h-10"></div>
     </>
   )
 }

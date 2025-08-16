@@ -45,10 +45,10 @@ function Contact() {
           src={flower}
           className="col-span-1 row-start-2 sm:row-start-1 h-20 sm:h-full w-full object-cover object-bottom"
         />
-        <div className="bg-[#583F25] h-full p-8 col-span-2 justify-center grid gap-4 items-center">
+        <div className="bg-[#583F25] h-full p-10 col-span-2 justify-center grid gap-4 items-center">
           <h1 className="text-white">Contact</h1>
           <form
-            className="h-full w-full grid grid-cols-1 gap-2 p-20 bg-white items-center"
+            className="h-full w-full grid grid-cols-1 gap-1 p-20 bg-white items-center"
             onSubmit={handleOnSubmit}
           >
             <input
@@ -56,35 +56,35 @@ function Contact() {
               type="name"
               name="name"
               placeholder="Name"
-              className="bg-white border-2 border-white border-b-gray-500 p-2 col-span-2 outline-gray-200"
+              className="bg-white border-2 border-white border-b-[#583F25] p-2 col-span-2 outline-gray-200"
               required
             />
             <input
               placeholder="Email"
               name="contact"
               type="Text"
-              className="bg-white border-2 border-white border-b-gray-500 p-2 col-span-2 outline-gray-200"
+              className="bg-white border-2 border-white border-b-[#583F25] p-2 col-span-2 outline-gray-200"
               required
             />
             <input
               placeholder="Phone Number"
               name="phone"
               type="Text"
-              className="bg-white border-2 border-white border-b-gray-500 p-2 col-span-2 outline-gray-200"
+              className="bg-white border-2 border-white border-b-[#583F25] p-2 col-span-2 outline-gray-200"
               required
             />
 
             <textarea
               id="message"
               name="message"
-              className="bg-white border-2 border-white border-b-gray-500 p-2 col-span-2 outline-gray-200"
+              className="bg-white border-2 border-white border-b-[#583F25] p-2 col-span-2 outline-gray-200"
               placeholder="Message"
             ></textarea>
 
             <button
               type="submit"
               disabled={serverState.submitting}
-              className="bg-gray-300 rounded-none mt-3"
+              className="bg-[#e2ddcc] rounded-2xl mt-3"
             >
               Send
             </button>
