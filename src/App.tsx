@@ -1,6 +1,5 @@
 import mainlogo from "./assets/images/Mainlogo.png"
 import video from "./assets/images/videohold.png"
-import drift from "./assets/images/flwr.jpg"
 import write from "./assets/images/write.jpg"
 import rock from "./assets/images/bg.jpg"
 import downloadImage from "./assets/download.png"
