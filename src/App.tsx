@@ -113,6 +113,21 @@ function App() {
           </button>
         </a>
       </div>
+      <div className="grid grid-cols-2">
+        <img src={rock} className="w-full" />
+        <div className="grid">
+          <h1 className="pt-10">Packages Available</h1>
+          <p className="p-5">
+            Different stories and needs, there are options for the beginner all
+            the way to capturing the full story
+          </p>
+          <a className="self-center pb-10" href="#Resume">
+            <button className="text-[#e2ddcc] bg-[#583F25] mt-4 rounded-2xl w-1/2 text-xl pt-3 pb-3">
+              More Details
+            </button>
+          </a>
+        </div>
+      </div>
       <div className="bg-[#fbf9f3]">
         <h1 className="pt-10">Testimonials</h1>
         <div className="grid grid-cols-3 gap-8 p-10 place-content-center justify-items-center place-items-center">
