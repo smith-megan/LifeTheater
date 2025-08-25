@@ -115,7 +115,7 @@ function App() {
       </div>
       <div className="bg-[#fbf9f3]">
         <h1 className="pt-10">Testimonials</h1>
-        <div className="grid grid-cols-3 gap-8 p-10">
+        <div className="grid grid-cols-3 gap-8 p-10 place-content-center justify-items-center place-items-center">
           <div className="bg-[#f4f0e2] p-4 rounded-3xl">
             <img
               src={lineHands}
@@ -127,12 +127,12 @@ function App() {
                 src={leftquote}
                 className="w-1/4 self-start justify-self-end"
               />
-              <h2 className="pt-4 pb-4">
+              <h2 className=" p-1 pt-4 pb-4">
                 This is an amazing chance to capture a legacy like never before
               </h2>
               <img
                 src={rightquote}
-                className="w-1/4 self-end justify-self-start"
+                className="w-1/4 self-end justify-self-start pb-2"
               />
             </div>
             <h2 className="font-special text-xl">-Megan Smith</h2>
@@ -149,13 +149,13 @@ function App() {
                   src={leftquote}
                   className="w-1/4 self-start justify-self-end"
                 />
-                <h2 className="pt-4 pb-4">
+                <h2 className=" p-1 pt-4 pb-4">
                   Something Different that is longer than just a few words and
                   will be filled in after a minute here
                 </h2>
                 <img
                   src={rightquote}
-                  className="w-1/4 self-end justify-self-start"
+                  className="w-1/4 self-end justify-self-start pb-2"
                 />
               </div>
               <h2 className="font-special text-xl">-Bob Johnson</h2>
@@ -173,13 +173,13 @@ function App() {
                   src={leftquote}
                   className="w-1/4 self-start justify-self-end"
                 />
-                <h2 className="pt-4 pb-4">
+                <h2 className="p-1 pt-4 pb-4">
                   I will fill this in later with something great and it will be
                   inspiring
                 </h2>
                 <img
                   src={rightquote}
-                  className="w-1/4 self-end justify-self-start"
+                  className="w-1/4 self-end justify-self-start pb-2"
                 />
               </div>
               <h2 className="font-special text-xl">-Oprah Winfrey</h2>
