@@ -2,8 +2,13 @@ import mainlogo from "./assets/images/Mainlogo.png"
 import video from "./assets/images/videohold.png"
 import write from "./assets/images/write.jpg"
 import rock from "./assets/images/bg.jpg"
+import lineTree from "./assets/images/lineTree.png"
+import lineHands from "./assets/images/lineHands.png"
+import lineCouple from "./assets/images/lineCouple.png"
 import downloadImage from "./assets/download.png"
 import rightImage from "./assets/right.png"
+import leftquote from "./assets/leftquote.png"
+import rightquote from "./assets/rightquote.png"
 import "./App.css"
 import Nav from "./Nav"
 import Contact from "./Contact"
@@ -62,7 +67,7 @@ function App() {
         <h1 className="text-[#f4f0e2] sm:p-2">Our Printable Brochure</h1>
         <div className="grid grid-cols-2 gap-3 sm:gap-5">
           <a
-            href={"/Brochure.png"}
+            href={"/LifeTheaterBrochure.pdf"}
             className="bg-[#f4f0e2] rounded-2xl text-xl flex justify-center self-center items-center"
           >
             Download
@@ -109,19 +114,77 @@ function App() {
         </a>
       </div>
       <div className="bg-[#fbf9f3]">
-        <h1>Testimonials</h1>
-        <div className="grid grid-cols-3">
-          <div>
-            <img src={rightImage} className="w-1/12" />
-            <h2>
-              This is an amazing chance to capture a legacy like never before
-            </h2>
-
-            <img src={rightImage} className="w-1/12" />
-            <h2>-Name</h2>
+        <h1 className="pt-10">Testimonials</h1>
+        <div className="grid grid-cols-3 gap-8 p-10">
+          <div className="bg-[#f4f0e2] p-4 rounded-3xl">
+            <img
+              src={lineHands}
+              alt="Line Drawing of a tree"
+              className="self-center justify-self-center w-full rounded-3xl p-3"
+            />
+            <div className="grid grid-flow-col place-content-center text-center">
+              <img
+                src={leftquote}
+                className="w-1/4 self-start justify-self-end"
+              />
+              <h2 className="pt-4 pb-4">
+                This is an amazing chance to capture a legacy like never before
+              </h2>
+              <img
+                src={rightquote}
+                className="w-1/4 self-end justify-self-start"
+              />
+            </div>
+            <h2 className="font-special text-xl">-Megan Smith</h2>
           </div>
-          <h2>two</h2>
-          <h2>three</h2>
+          <div>
+            <div className="bg-[#f4f0e2] p-4 rounded-3xl">
+              <img
+                src={lineTree}
+                alt="Line Drawing of a tree"
+                className="self-center justify-self-center w-full rounded-3xl p-3"
+              />
+              <div className="grid grid-flow-col place-content-center text-center">
+                <img
+                  src={leftquote}
+                  className="w-1/4 self-start justify-self-end"
+                />
+                <h2 className="pt-4 pb-4">
+                  Something Different that is longer than just a few words and
+                  will be filled in after a minute here
+                </h2>
+                <img
+                  src={rightquote}
+                  className="w-1/4 self-end justify-self-start"
+                />
+              </div>
+              <h2 className="font-special text-xl">-Bob Johnson</h2>
+            </div>
+          </div>
+          <div>
+            <div className="bg-[#f4f0e2] p-4 rounded-3xl">
+              <img
+                src={lineCouple}
+                alt="Line Drawing of a tree"
+                className="self-center justify-self-center w-full rounded-3xl p-3"
+              />
+              <div className="grid grid-flow-col place-content-center text-center">
+                <img
+                  src={leftquote}
+                  className="w-1/4 self-start justify-self-end"
+                />
+                <h2 className="pt-4 pb-4">
+                  I will fill this in later with something great and it will be
+                  inspiring
+                </h2>
+                <img
+                  src={rightquote}
+                  className="w-1/4 self-end justify-self-start"
+                />
+              </div>
+              <h2 className="font-special text-xl">-Oprah Winfrey</h2>
+            </div>
+          </div>
         </div>
       </div>
       <div id="Contact">
