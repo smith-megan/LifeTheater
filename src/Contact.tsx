@@ -39,7 +39,7 @@ function Contact() {
     <div>
       <div
         className="grid w-full grid-cols-1 sm:grid-cols-3 items-center pb-3"
-        id="Contact"
+        id="contact"
       >
         <img
           src={flower}

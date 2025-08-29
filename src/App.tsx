@@ -1,5 +1,5 @@
 import mainlogo from "./assets/images/Mainlogo.png"
-import video from "./assets/images/videohold.png"
+// import videopic from "./assets/images/videohold.png"
 import write from "./assets/images/write.jpg"
 import rock from "./assets/images/bg.jpg"
 import lineTree from "./assets/images/lineTree.png"
@@ -9,6 +9,7 @@ import downloadImage from "./assets/download.png"
 import rightImage from "./assets/right.png"
 import leftquote from "./assets/leftquote.png"
 import rightquote from "./assets/rightquote.png"
+import video from "./assets/video/smallintro.mp4"
 import "./App.css"
 import Nav from "./Nav"
 import Contact from "./Contact"
@@ -19,26 +20,36 @@ function App() {
     <>
       <Analytics />
       <Nav />
-      <div className="grid grid-cols-2 bg-[#f4f0e2] place-content-center p-5">
+      <div
+        className="grid md:grid-cols-2 bg-[#f4f0e2] place-content-center p-5"
+        id="intro"
+      >
         <img
           className="align-middle justify-self-center"
           src={mainlogo}
           alt="LifeTheater Logo"
         />
-        <img
+        <video className="align-middle justify-self-center p-2" controls>
+          <source
+            className="align-middle justify-self-center"
+            src={video}
+            type="video/mp4"
+          />
+        </video>
+        {/* <img
           className="align-middle justify-self-center"
-          src={video}
+          src={videopic}
           alt="Lifetheater Logo"
-        />
+        /> */}
       </div>
       <div className="bg-[#f4f0e2] pb-5">
-        <a className="self-center" href="#Intro">
+        <a className="self-center" href="#contact">
           <button className="bg-[#583F25] text-white mt-4 rounded-2xl w-1/2 text-2xl pt-3 pb-3">
             Book Now
           </button>
         </a>
       </div>
-      <div className="grid bg-[#fbf9f3] sm:grid-cols-2 sm:p-20" id="Intro">
+      <div className="grid bg-[#fbf9f3] sm:grid-cols-2 sm:p-20" id="about">
         <div className="grid p-10 pb-2 sm:pb-10 sm:p-2 grid-cols-12 relative">
           <div className="row-start-1 col-overlap pt-10 sm:pt-12 z-10">
             <img src={write} />
@@ -53,16 +64,16 @@ function App() {
             amplify voices to merge individual storytelling with community and
             cinematic elements.
           </p>
-          <a className="self-center" href="#Resume">
-            <button className="bg-[#e2ddcc] text-[#583F25] mt-4 rounded-2xl w-1/2 text-xl pt-3 pb-3">
-              View our Packages
+          <a className="self-center" href="#Contact">
+            <button className="bg-[#e2ddcc] text-[#583F25] mt-4 rounded-2xl w-11/12 text-xl pt-3 pb-3">
+              Lets work together
             </button>
           </a>
         </div>
       </div>
       <div
-        className="bg-[#583F25] grid grid-cols-2 justify-center items-center place-content-around p-4 w-full"
-        id="Resume"
+        className="bg-[#583F25] grid md:grid-cols-2 justify-center items-center place-content-around p-4 w-full"
+        id="brochure"
       >
         <h1 className="text-[#f4f0e2] sm:p-2">Our Printable Brochure</h1>
         <div className="grid grid-cols-2 gap-3 sm:gap-5">
@@ -84,7 +95,7 @@ function App() {
       </div>
       <div className="grid p-5 gap-4 bg-[#f4f0e2] place-content-center">
         <h1 className="p-9 pb-2">Life in Three Acts</h1>
-        <div className="grid grid-cols-3 gap-10 p-5">
+        <div className="grid md:grid-cols-3 gap-10 p-5">
           <div className="bg-[#fbf9f3] p-7">
             <h2 className="font-special p-4 text-lg">Act One: Character</h2>
             <p>
@@ -107,13 +118,13 @@ function App() {
             </p>
           </div>
         </div>
-        <a className="self-center pb-10" href="#Resume">
+        <a className="self-center pb-10" href="#contact">
           <button className="bg-[#e2ddcc] text-[#583F25] mt-4 rounded-2xl w-1/2 text-xl pt-3 pb-3">
             Tell Your Story Today
           </button>
         </a>
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2" id="packages">
         <img src={rock} className="w-full" />
         <div className="grid">
           <h1 className="pt-10">Packages Available</h1>
@@ -121,16 +132,16 @@ function App() {
             Different stories and needs, there are options for the beginner all
             the way to capturing the full story
           </p>
-          <a className="self-center pb-10" href="#Resume">
+          <a className="self-center pb-10" href="#contact">
             <button className="text-[#e2ddcc] bg-[#583F25] mt-4 rounded-2xl w-1/2 text-xl pt-3 pb-3">
               More Details
             </button>
           </a>
         </div>
       </div>
-      <div className="bg-[#fbf9f3]">
+      <div className="bg-[#fbf9f3]" id="testimonials">
         <h1 className="pt-10">Testimonials</h1>
-        <div className="grid grid-cols-3 gap-8 p-10 place-content-center justify-items-center place-items-center">
+        <div className="grid md:grid-cols-3 gap-8 p-10 place-content-center justify-items-center place-items-center">
           <div className="bg-[#f4f0e2] p-4 rounded-3xl">
             <img
               src={lineHands}
@@ -157,7 +168,7 @@ function App() {
               <img
                 src={lineTree}
                 alt="Line Drawing of a tree"
-                className="self-center justify-self-center w-full rounded-3xl p-3"
+                className="self-center justify-self-center w-5/6 rounded-3xl p-3"
               />
               <div className="grid grid-flow-col place-content-center text-center">
                 <img
