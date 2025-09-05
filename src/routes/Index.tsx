@@ -1,27 +1,39 @@
-import mainlogo from "./assets/images/Mainlogo.png"
+// import { useEffect, useRef } from "react"
+import mainlogo from "../assets/images/Mainlogo.png"
 // import videopic from "./assets/images/videohold.png"
-import write from "./assets/images/write.jpg"
-import rock from "./assets/images/bg.jpg"
-import lineTree from "./assets/images/lineTree.png"
-import lineHands from "./assets/images/lineHands.png"
-import lineCouple from "./assets/images/lineCouple.png"
-import downloadImage from "./assets/download.png"
-import rightImage from "./assets/right.png"
-import leftquote from "./assets/leftquote.png"
-import rightquote from "./assets/rightquote.png"
-import video from "./assets/video/smallintro.mp4"
-import "./App.css"
-import Nav from "./Nav"
-import Contact from "./Contact"
-import { Analytics } from "@vercel/analytics/react"
+import write from "../assets/images/write.jpg"
+import rock from "../assets/images/bg.jpg"
+import lineTree from "../assets/images/lineTree.png"
+import lineHands from "../assets/images/lineHands.png"
+import lineCouple from "../assets/images/lineCouple.png"
+import downloadImage from "../assets/download.png"
+import rightImage from "../assets/right.png"
+import leftquote from "../assets/leftquote.png"
+import rightquote from "../assets/rightquote.png"
+import video from "../assets/video/smallintro.mp4"
+import "../App.css"
+import Contact from "../routes/Contact"
 
-function App() {
+import { createFileRoute } from "@tanstack/react-router"
+
+export const Route = createFileRoute("/Index")({
+  component: Index,
+})
+
+function Index() {
+  // const testimonialRef = useRef<HTMLDivElement | null>(null)
+
+  // const { section } = Route.useParams()
+  // useEffect(() => {
+  //   if (testimonialRef.current && section === "testimonials") {
+  //     testimonialRef.current.scrollIntoView({ behavior: "smooth" })
+  //   }
+  // }, [section])
+
   return (
     <>
-      <Analytics />
-      <Nav />
       <div
-        className="grid md:grid-cols-2 bg-[#f4f0e2] place-content-center p-5"
+        className="grid md:grid-cols-2 bg-[#f4f0e2] place-content-center place-items-center p-5"
         id="intro"
       >
         <img
@@ -29,7 +41,10 @@ function App() {
           src={mainlogo}
           alt="LifeTheater Logo"
         />
-        <video className="align-middle justify-self-center p-2" controls>
+        <video
+          className="align-middle justify-self-center place-content-center p-2 rounded-3xl"
+          controls
+        >
           <source
             className="align-middle justify-self-center"
             src={video}
@@ -49,7 +64,7 @@ function App() {
           </button>
         </a>
       </div>
-      <div className="grid bg-[#fbf9f3] sm:grid-cols-2 sm:p-20" id="about">
+      <div className="grid bg-[#fbf9f3] sm:grid-cols-2 sm:p-20" id="brochure">
         <div className="grid p-10 pb-2 sm:pb-10 sm:p-2 grid-cols-12 relative">
           <div className="row-start-1 col-overlap pt-10 sm:pt-12 z-10">
             <img src={write} />
@@ -71,10 +86,7 @@ function App() {
           </a>
         </div>
       </div>
-      <div
-        className="bg-[#583F25] grid md:grid-cols-2 justify-center items-center place-content-around p-4 w-full"
-        id="brochure"
-      >
+      <div className="bg-[#583F25] grid md:grid-cols-2 justify-center items-center place-content-around p-4 w-full">
         <h1 className="text-[#f4f0e2] sm:p-2">Our Printable Brochure</h1>
         <div className="grid grid-cols-2 gap-3 sm:gap-5">
           <a
@@ -221,4 +233,4 @@ function App() {
   )
 }
 
-export default App
+export default Index

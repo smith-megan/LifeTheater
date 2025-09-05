@@ -1,6 +1,12 @@
 import { useState } from "react"
 import axios from "axios"
-import flower from "./assets/images/flwr.jpg"
+import flower from "../assets/images/flwr.jpg"
+
+import { createFileRoute } from "@tanstack/react-router"
+
+export const Route = createFileRoute("/Contact")({
+  component: Contact,
+})
 
 function Contact() {
   const [serverState, setServerState] = useState({
@@ -45,10 +51,10 @@ function Contact() {
           src={flower}
           className="col-span-1 row-start-2 sm:row-start-1 h-20 sm:h-full w-full object-cover object-bottom"
         />
-        <div className="bg-[#583F25] h-full p-10 col-span-2 justify-center grid gap-4 items-center">
+        <div className="bg-[#583F25] h-full p-8 col-span-2 justify-center grid gap-4 items-center">
           <h1 className="text-white">Contact</h1>
           <form
-            className="h-full w-full grid grid-cols-1 gap-1 p-20 bg-white items-center"
+            className="w-full grid gap-1 p-12 bg-white items-center"
             onSubmit={handleOnSubmit}
           >
             <input
