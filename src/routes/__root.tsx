@@ -20,7 +20,7 @@ const RootLayout = () => (
       <Link className="self-center" to="/Packages">
         <h2>Packages</h2>
       </Link>
-      <Link className="self-center" to="/Brochure">
+      <Link className="self-center" to="/Index" hash="brochure">
         <h2>Brochure</h2>
       </Link>
       <Link className="self-center" to="/Contact">

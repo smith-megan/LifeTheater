@@ -14,7 +14,7 @@ import video from "../assets/video/smallintro.mp4"
 import "../App.css"
 import Contact from "../routes/Contact"
 
-import { createFileRoute } from "@tanstack/react-router"
+import { createFileRoute, Link } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/Index")({
   component: Index,
@@ -79,11 +79,11 @@ function Index() {
             amplify voices to merge individual storytelling with community and
             cinematic elements.
           </p>
-          <a className="self-center" href="#Contact">
+          <Link className="self-center" to="/Contact">
             <button className="bg-[#e2ddcc] text-[#583F25] mt-4 rounded-2xl w-11/12 text-xl pt-3 pb-3">
               Lets work together
             </button>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="bg-[#583F25] grid md:grid-cols-2 justify-center items-center place-content-around p-4 w-full">
@@ -91,6 +91,7 @@ function Index() {
         <div className="grid grid-cols-2 gap-3 sm:gap-5">
           <a
             href={"/LifeTheaterBrochure.pdf"}
+            download
             className="bg-[#f4f0e2] rounded-2xl text-xl flex justify-center self-center items-center"
           >
             Download

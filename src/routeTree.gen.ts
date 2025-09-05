@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PackagesRouteImport } from './routes/Packages'
 import { Route as IndexRouteImport } from './routes/Index'
 import { Route as ContactRouteImport } from './routes/Contact'
-import { Route as BrochureRouteImport } from './routes/Brochure'
 
 const PackagesRoute = PackagesRouteImport.update({
   id: '/Packages',
@@ -29,41 +28,32 @@ const ContactRoute = ContactRouteImport.update({
   path: '/Contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BrochureRoute = BrochureRouteImport.update({
-  id: '/Brochure',
-  path: '/Brochure',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
-  '/Brochure': typeof BrochureRoute
   '/Contact': typeof ContactRoute
   '/Index': typeof IndexRoute
   '/Packages': typeof PackagesRoute
 }
 export interface FileRoutesByTo {
-  '/Brochure': typeof BrochureRoute
   '/Contact': typeof ContactRoute
   '/Index': typeof IndexRoute
   '/Packages': typeof PackagesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/Brochure': typeof BrochureRoute
   '/Contact': typeof ContactRoute
   '/Index': typeof IndexRoute
   '/Packages': typeof PackagesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/Brochure' | '/Contact' | '/Index' | '/Packages'
+  fullPaths: '/Contact' | '/Index' | '/Packages'
   fileRoutesByTo: FileRoutesByTo
-  to: '/Brochure' | '/Contact' | '/Index' | '/Packages'
-  id: '__root__' | '/Brochure' | '/Contact' | '/Index' | '/Packages'
+  to: '/Contact' | '/Index' | '/Packages'
+  id: '__root__' | '/Contact' | '/Index' | '/Packages'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  BrochureRoute: typeof BrochureRoute
   ContactRoute: typeof ContactRoute
   IndexRoute: typeof IndexRoute
   PackagesRoute: typeof PackagesRoute
@@ -92,18 +82,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Brochure': {
-      id: '/Brochure'
-      path: '/Brochure'
-      fullPath: '/Brochure'
-      preLoaderRoute: typeof BrochureRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  BrochureRoute: BrochureRoute,
   ContactRoute: ContactRoute,
   IndexRoute: IndexRoute,
   PackagesRoute: PackagesRoute,
