@@ -10,17 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PackagesRouteImport } from './routes/Packages'
-import { Route as IndexRouteImport } from './routes/Index'
 import { Route as ContactRouteImport } from './routes/Contact'
+import { Route as IndexRouteImport } from './routes/index'
 
 const PackagesRoute = PackagesRouteImport.update({
   id: '/Packages',
   path: '/Packages',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/Index',
-  path: '/Index',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -28,34 +23,39 @@ const ContactRoute = ContactRouteImport.update({
   path: '/Contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/Contact': typeof ContactRoute
-  '/Index': typeof IndexRoute
   '/Packages': typeof PackagesRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/Contact': typeof ContactRoute
-  '/Index': typeof IndexRoute
   '/Packages': typeof PackagesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/Contact': typeof ContactRoute
-  '/Index': typeof IndexRoute
   '/Packages': typeof PackagesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/Contact' | '/Index' | '/Packages'
+  fullPaths: '/' | '/Contact' | '/Packages'
   fileRoutesByTo: FileRoutesByTo
-  to: '/Contact' | '/Index' | '/Packages'
-  id: '__root__' | '/Contact' | '/Index' | '/Packages'
+  to: '/' | '/Contact' | '/Packages'
+  id: '__root__' | '/' | '/Contact' | '/Packages'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  ContactRoute: typeof ContactRoute
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
   PackagesRoute: typeof PackagesRoute
 }
 
@@ -68,13 +68,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PackagesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Index': {
-      id: '/Index'
-      path: '/Index'
-      fullPath: '/Index'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/Contact': {
       id: '/Contact'
       path: '/Contact'
@@ -82,12 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  ContactRoute: ContactRoute,
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
   PackagesRoute: PackagesRoute,
 }
 export const routeTree = rootRouteImport
