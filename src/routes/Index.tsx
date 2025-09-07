@@ -10,7 +10,7 @@ import downloadImage from "../assets/download.png"
 import rightImage from "../assets/right.png"
 import leftquote from "../assets/leftquote.png"
 import rightquote from "../assets/rightquote.png"
-import video from "../assets/video/smallintro.mp4"
+import video from "../assets/video/sm.mp4"
 import "../App.css"
 import Contact from "../routes/Contact"
 
