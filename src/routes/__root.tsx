@@ -16,7 +16,7 @@ const RootLayout = () => (
         {/* <div className="flex justify-center items-center"> */}
         {/* <img src={media} className="  self-center w-1/5 p-1" /> */}
         {/* </div> */}
-      </Link>
+      </Link>{" "}
       <Link className="self-center" to="/Packages">
         <h2>Packages</h2>
       </Link>
