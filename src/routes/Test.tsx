@@ -16,7 +16,7 @@ import Contact from "../routes/Contact"
 
 import { createFileRoute, Link } from "@tanstack/react-router"
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/Test")({
   component: index,
 })
 

@@ -9,7 +9,10 @@ const RootLayout = () => (
   <>
     <Analytics />
     <div className="font-special font-medium text-lg bg-[#f4f0e2] grid md:grid-flow-col md:grid-cols-7 align-middle sticky top-0 z-20 p-2 shadow-md">
-      <Link className="md:col-span-4 flex justify-center items-center" to="/">
+      <Link
+        className="md:col-span-4 flex justify-center items-center"
+        to="/Test"
+      >
         <img src={logo} className="self-center w-1/6 pl-4"></img>
         <img src={logo2} className="self-center w-1/2 p-1" />
         {/* <div className="flex justify-center items-center"> */}
@@ -19,7 +22,7 @@ const RootLayout = () => (
       <Link className="self-center" to="/Packages">
         <h2>Packages</h2>
       </Link>
-      <Link className="self-center" to="/" hash="brochure">
+      <Link className="self-center" to="/Test" hash="brochure">
         <h2>Brochure</h2>
       </Link>
       <Link className="self-center" to="/Contact">
