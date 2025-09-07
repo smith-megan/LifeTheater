@@ -3,9 +3,9 @@ import mainlogo from "../assets/images/Mainlogo.png"
 // import videopic from "./assets/images/videohold.png"
 import write from "../assets/images/write.jpg"
 import rock from "../assets/images/bg.jpg"
-import lineTree from "../assets/images/lineTree.png"
+// import lineTree from "../assets/images/lineTree.png"
 import lineHands from "../assets/images/lineHands.png"
-import lineCouple from "../assets/images/lineCouple.png"
+// import lineCouple from "../assets/images/lineCouple.png"
 import downloadImage from "../assets/download.png"
 import rightImage from "../assets/right.png"
 import leftquote from "../assets/leftquote.png"
@@ -153,30 +153,33 @@ function Index() {
         </div>
       </div>
       <div className="bg-[#fbf9f3]" id="testimonials">
-        <h1 className="pt-10">Testimonials</h1>
+        {/* <h1 className="pt-10">Testimonials</h1> */}
         <div className="grid md:grid-cols-3 gap-8 p-10 place-content-center justify-items-center place-items-center">
           <div className="bg-[#f4f0e2] p-4 rounded-3xl">
             <img
               src={lineHands}
-              alt="Line Drawing of a tree"
+              alt="Line drawing of hands"
               className="self-center justify-self-center w-full rounded-3xl p-3"
             />
+          </div>
+          <div className="md:col-span-2 grid grid-flow-row">
             <div className="grid grid-flow-col place-content-center text-center">
               <img
                 src={leftquote}
                 className="w-1/4 self-start justify-self-end"
               />
               <h2 className=" p-1 pt-4 pb-4">
-                This is an amazing chance to capture a legacy like never before
+                Carve your name on hearts, not tombstones. A legacy is etched
+                into the minds of others and the stories they share about you.
               </h2>
               <img
                 src={rightquote}
                 className="w-1/4 self-end justify-self-start pb-2"
               />
             </div>
-            <h2 className="font-special text-xl">-Megan Smith</h2>
+            <h2 className="font-special text-xl">-Shannon Alder</h2>
           </div>
-          <div>
+          {/* <div>
             <div className="bg-[#f4f0e2] p-4 rounded-3xl">
               <img
                 src={lineTree}
@@ -223,7 +226,7 @@ function Index() {
               </div>
               <h2 className="font-special text-xl">-Oprah Winfrey</h2>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div id="Contact">

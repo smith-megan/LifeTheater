@@ -2,15 +2,18 @@ import { createRootRoute, Link, Outlet } from "@tanstack/react-router"
 // import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
 // import Nav from "./Nav.tsx"
 import logo from "../assets/logo.png"
-import logo2 from "../assets/logo2.png"
+import logo2 from "../assets/logo3.png"
 // import media from "../assets/media.png"
 import { Analytics } from "@vercel/analytics/react"
 
 const RootLayout = () => (
   <>
     <Analytics />
-    <div className="font-special font-medium text-lg bg-[#f4f0e2] grid md:grid-flow-col align-middle sticky top-0 z-20 p-2 shadow-md">
-      <Link className="flex justify-center items-center" to="/Index">
+    <div className="font-special font-medium text-lg bg-[#f4f0e2] grid md:grid-flow-col md:grid-cols-7 align-middle sticky top-0 z-20 p-2 shadow-md">
+      <Link
+        className="md:col-span-4 flex justify-center items-center"
+        to="/Index"
+      >
         <img src={logo} className="self-center w-1/6 pl-4"></img>
         <img src={logo2} className="self-center w-1/2 p-1" />
         {/* <div className="flex justify-center items-center"> */}
@@ -26,14 +29,14 @@ const RootLayout = () => (
       <Link className="self-center" to="/Contact">
         <h2>Contact</h2>
       </Link>
-      <Link
+      {/* <Link
         className="self-center"
         to="/Index"
         hash="testimonials"
         // params={{ section: "testimonials" }}
       >
         <h2>Testimonials</h2>
-      </Link>
+      </Link> */}
     </div>
     <Outlet />
     {/* <TanStackRouterDevtools /> */}
