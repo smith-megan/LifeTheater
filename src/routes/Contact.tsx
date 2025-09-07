@@ -31,7 +31,7 @@ function Contact() {
     setServerState(newServerState)
     axios({
       method: "post",
-      url: "https://formspree.io/xyynbnyr",
+      url: "https://formspree.io/f/mblapezz",
       data: new FormData(form),
     })
       .then(() => {
