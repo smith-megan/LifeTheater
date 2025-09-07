@@ -17,10 +17,10 @@ import Contact from "../routes/Contact"
 import { createFileRoute, Link } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: index,
 })
 
-function Index() {
+function index() {
   // const testimonialRef = useRef<HTMLDivElement | null>(null)
 
   // const { section } = Route.useParams()
@@ -237,4 +237,4 @@ function Index() {
   )
 }
 
-export default Index
+export default index
