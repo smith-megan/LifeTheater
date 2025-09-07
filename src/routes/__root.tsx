@@ -1,9 +1,8 @@
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router"
-// import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
 // import Nav from "./Nav.tsx"
 import logo from "../assets/logo.png"
 import logo2 from "../assets/logo3.png"
-// import media from "../assets/media.png"
 import { Analytics } from "@vercel/analytics/react"
 
 const RootLayout = () => (
@@ -36,7 +35,7 @@ const RootLayout = () => (
       </Link> */}
     </div>
     <Outlet />
-    {/* <TanStackRouterDevtools /> */}
+    <TanStackRouterDevtools />
   </>
 )
 
