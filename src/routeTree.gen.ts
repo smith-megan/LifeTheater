@@ -9,10 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as BlahRouteImport } from './routes/blah'
 import { Route as PackagesRouteImport } from './routes/Packages'
 import { Route as ContactRouteImport } from './routes/Contact'
-import { Route as IndexRouteImport } from './routes/index'
 
+const BlahRoute = BlahRouteImport.update({
+  id: '/blah',
+  path: '/blah',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PackagesRoute = PackagesRouteImport.update({
   id: '/Packages',
   path: '/Packages',
@@ -23,44 +28,46 @@ const ContactRoute = ContactRouteImport.update({
   path: '/Contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
   '/Contact': typeof ContactRoute
   '/Packages': typeof PackagesRoute
+  '/blah': typeof BlahRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
   '/Contact': typeof ContactRoute
   '/Packages': typeof PackagesRoute
+  '/blah': typeof BlahRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
   '/Contact': typeof ContactRoute
   '/Packages': typeof PackagesRoute
+  '/blah': typeof BlahRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/Contact' | '/Packages'
+  fullPaths: '/Contact' | '/Packages' | '/blah'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/Contact' | '/Packages'
-  id: '__root__' | '/' | '/Contact' | '/Packages'
+  to: '/Contact' | '/Packages' | '/blah'
+  id: '__root__' | '/Contact' | '/Packages' | '/blah'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
   PackagesRoute: typeof PackagesRoute
+  BlahRoute: typeof BlahRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/blah': {
+      id: '/blah'
+      path: '/blah'
+      fullPath: '/blah'
+      preLoaderRoute: typeof BlahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/Packages': {
       id: '/Packages'
       path: '/Packages'
@@ -75,20 +82,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   PackagesRoute: PackagesRoute,
+  BlahRoute: BlahRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
