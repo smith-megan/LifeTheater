@@ -25,6 +25,7 @@ const RootLayout = () => (
       <Link className="self-center" to="/Contact">
         <h2>Contact</h2>
       </Link>
+      <Link to="/planning"></Link>
       {/* <Link
         className="self-center"
         to="/Index"
