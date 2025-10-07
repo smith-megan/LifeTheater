@@ -12,20 +12,19 @@ const RootLayout = () => (
       <Link className="md:col-span-4 flex justify-center items-center" to="/">
         <img src={logo} className="self-center w-1/6 pl-4"></img>
         <img src={logo2} className="self-center w-1/2 p-1" />
-        {/* <div className="flex justify-center items-center"> */}
-        {/* <img src={media} className="  self-center w-1/5 p-1" /> */}
-        {/* </div> */}
-      </Link>{" "}
+      </Link>
       <Link className="self-center" to="/Packages">
-        <h2>Packages</h2>
+        <h2>Personal Legacy</h2>
       </Link>
-      <Link className="self-center" to="/" hash="brochure">
+      <Link className="self-center" to="/documentary">
+        <h2>Documentary</h2>
+      </Link>
+      {/* <Link className="self-center" to="/" hash="brochure">
         <h2>Brochure</h2>
-      </Link>
+      </Link> */}
       <Link className="self-center" to="/Contact">
         <h2>Contact</h2>
       </Link>
-      <Link to="/planning"></Link>
       {/* <Link
         className="self-center"
         to="/Index"
